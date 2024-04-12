@@ -1,7 +1,7 @@
 package com.day1.reverse_integer;
 
 //https://leetcode.com/problems/reverse-integer/submissions/1230054736/
-//Accepted
+//Accepted 
 public class Solution {
 	public static void main(String[] args) {
 		System.out.println(reverse(1534236469));
