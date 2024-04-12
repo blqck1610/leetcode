@@ -6,7 +6,7 @@ import java.util.Comparator;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map.Entry;
-//passes
+//Accepted
 //https://leetcode.com/problems/reorganize-string/
 public class Solution {
 	public static String reorganizeString(String s) {

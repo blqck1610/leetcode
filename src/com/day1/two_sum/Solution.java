@@ -1,7 +1,7 @@
 package com.day1.two_sum;
 
 // https://leetcode.com/problems/two-sum/
-// accept
+//Accepted
 public class Solution {
 	public static void main(String[] args) {
 		
