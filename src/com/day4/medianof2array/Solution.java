@@ -20,6 +20,7 @@ public class Solution {
 		int i = 0;
 		int j = 0;
 		int index = 0;
+//		merge 2 arrays to sorted array
 		while(i < nums1.length && j < nums2.length) {
 			if(nums1[i] <= nums2[j]) {
 				nums[index] = nums1[i];
@@ -44,7 +45,7 @@ public class Solution {
 				i ++;
 			}
 		}
-		
+//		find medina 
         
  		if(nums.length % 2 == 0) {
  			return (1.0 * nums[(nums.length / 2) - 1] + nums[(nums.length / 2) ]) / 2;
