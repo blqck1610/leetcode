@@ -16,24 +16,21 @@ public class Solution {
     }
 
     public static String convert(String s, int numRows) {
-        if(numRows == 1 || numRows >= s.length()) {
+        if (numRows == 1 || numRows >= s.length()) {
             return s;
         }
-        int up = 1;
-        int index = 0;
-        List<StringBuilder> rows = new ArrayList<>();
+        int up = -1;
+        int currentRow = 0;
+        StringBuilder[] rows = new StringBuilder[numRows];
         for (int i = 0; i < numRows; i++) {
-            rows.add(new StringBuilder());
+            rows[i] = new StringBuilder();
         }
-        for(int i = 0; i < s.length(); i ++){
-            if(index < 0 || index >= numRows){
-                up = up * -1;
-                index += up;
-                i --;
+        for (char c : s.toCharArray()) {
+            rows[currentRow].append(c);
+            if (currentRow == 0 || currentRow == numRows - 1) {
+                up *= -1;
             }
-            else
-                rows.get(index).append(s.charAt(i));
-            index += up;
+            currentRow += up;
         }
         StringBuilder result = new StringBuilder();
         for (StringBuilder row : rows) {
